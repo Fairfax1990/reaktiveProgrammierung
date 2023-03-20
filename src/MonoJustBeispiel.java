@@ -1,4 +1,3 @@
-import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 public class MonoJustBeispiel {
@@ -22,6 +21,4 @@ public class MonoJustBeispiel {
     private static double generiereZufallszahl() throws InterruptedException {;
         return Math.random();
     }
-
-
 }

@@ -24,9 +24,7 @@ public class FuturesBeispielV4 {
 
             long startZeit = Instant.now().getEpochSecond();
 
-            System.out.println("Ausführung von mockAufgabe " + aufgabe
-                    + ". \n Vergangene Zeit: " + stoppUhr
-                    + " Sekunden" + "\n ----------");
+            System.out.println("Ausführung von mockAufgabe " + aufgabe + ". \n Vergangene Zeit: " + stoppUhr + " Sekunden" + "\n ----------");
 
             Thread.sleep(bearbeitungsZeit * 1000);
 
