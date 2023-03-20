@@ -14,16 +14,16 @@ public class CacheBeispiel {
             System.out.println("Just-Fall. Vergangene Zeit in Sekunden: " + (zeit.getEpochSecond() - startZeit.getEpochSecond()));
         });
 
-        Flux<Instant> replayedObservable = Flux.fromIterable(List.of(rufeAktuelleZeitAbUndVerzoegere())).cache();
+        Flux<Instant> cachedObservable = Flux.fromIterable(List.of(rufeAktuelleZeitAbUndVerzoegere())).cache();
 
 
-        replayedObservable.doOnNext(zeit -> {
+        cachedObservable.doOnNext(zeit -> {
             druckeVergangeneZeit(zeit, startZeit);
         }).subscribe();
-        replayedObservable.doOnNext(zeit -> {
+        cachedObservable.doOnNext(zeit -> {
             druckeVergangeneZeit(zeit, startZeit);
         }).subscribe();
-        replayedObservable.doOnNext(zeit -> {
+        cachedObservable.doOnNext(zeit -> {
             druckeVergangeneZeit(zeit, startZeit);
         }).subscribe();
 
